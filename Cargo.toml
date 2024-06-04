@@ -1,0 +1,20 @@
+[package]
+name = "databricks-rust-catalog"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenv = "0.15.0"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+serde = {version = "1.0.144", features = ["derive"]}
+serde_json = { version = "1.0" }
+sqlx = { version = "0.7", features = [ "runtime-tokio-native-tls", "sqlite"] }
+log = { version = "0.4.3" }
+env_logger = { version = "0.11.3" }
+deltalake = { version = "0.17.3", features = ["azure", "datafusion"] }
+polars = { version = "0.40.0", features = ["lazy", "parquet" ] }
+bytes = "1.6.0"
+futures = "0.3.30"
